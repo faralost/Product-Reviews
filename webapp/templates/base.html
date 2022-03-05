@@ -20,6 +20,9 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="{% url 'webapp:index' %}" class="nav-link px-2 text-white">Главная</a></li>
                 {% block nav %}
+                    <li class="nav-item">
+                    <a class="nav-link px-2 text-white" href="{% url 'webapp:product_create' %}">Создание товара</a>
+                    </li>
                 {% endblock %}
             </ul>
             <div class="text-end">
