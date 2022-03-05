@@ -1,0 +1,372 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Товар самый лучший",
+    "description": "Товар самый лучший на свете",
+    "category": "other",
+    "image": "products/310519.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "Второй самый лучший товар",
+    "description": "",
+    "category": "other",
+    "image": "products/1000030.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "Напиток самый вкусный",
+    "description": "Напиток самый вкусный",
+    "category": "drinks",
+    "image": ""
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "Напиток жаждоутоляющий",
+    "description": "",
+    "category": "drinks",
+    "image": ""
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "Еда самая сытная",
+    "description": "Еда самая сытная",
+    "category": "food",
+    "image": "products/1124354.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "Еда сытнее первой",
+    "description": "Еда сытнее первой",
+    "category": "food",
+    "image": ""
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 7,
+  "fields": {
+    "name": "Книга интересная",
+    "description": "Интересней некуда",
+    "category": "books",
+    "image": ""
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 8,
+  "fields": {
+    "name": "Книга запрещенная",
+    "description": "Книга запрещенная везде",
+    "category": "books",
+    "image": "products/1140982.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 9,
+  "fields": {
+    "name": "Одежда трендовая",
+    "description": "Одежда трендовая",
+    "category": "clothes",
+    "image": ""
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 10,
+  "fields": {
+    "name": "Одежда не для всех",
+    "description": "",
+    "category": "clothes",
+    "image": "products/135625.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 17,
+  "fields": {
+    "name": "Test product",
+    "description": "test test test test\r\ntest fksdjfklsdjaflksjaldflkasdjf\r\ntest test test",
+    "category": "other",
+    "image": "products/135625_EEYxdRa.jpg"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 2,
+  "fields": {
+    "author": 2,
+    "product": 1,
+    "text": "sed velit dignissim sodales ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper",
+    "rate": 2,
+    "is_moderated": false,
+    "created_at": "2022-03-05T05:22:32.709Z",
+    "updated_at": "2022-03-05T05:22:32.709Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 3,
+  "fields": {
+    "author": 2,
+    "product": 1,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore commodo odio aenean sed. Feugiat in ante metus dictum at tempor commodo ullamcorper a.",
+    "rate": 3,
+    "is_moderated": true,
+    "created_at": "2022-03-05T05:23:10.384Z",
+    "updated_at": "2022-03-05T09:52:38.184Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 4,
+  "fields": {
+    "author": 2,
+    "product": 3,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Cras ornare arcu dui vivamus arcu felis. Eget sit amet tellus cras adipiscing enim eu turpis. Arcu cursus euismod quis viverra nibh cras pulvinar. In pellentesque massa placerat duis. Proin sed libero enim sed faucibus turpis in. Volutpat maecenas volutpat blandit aliquam etiam erat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Est sit amet facilisis magna etiam tempor orci eu. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Urna duis convallis convallis tellus id interdum. Ut tristique et egestas quis ipsum suspendisse ultrices. Vitae elementum curabitur vitae nunc sed.\r\n\r\nQuisque non tellus orci ac auctor. Sit amet massa vitae tortor condimentum lacinia quis vel. Donec ultrices tincidunt arcu non sodales neque sodales ut. Congue quisque egestas diam in arcu. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Sapien faucibus et molestie ac feugiat sed lectus. Sit amet porttitor eget dolor morbi. Et malesuada fames ac turpis egestas. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Mauris nunc congue nisi vitae suscipit. Justo laoreet sit amet cursus. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Turpis egestas integer eget aliquet nibh praesent tristique magna.",
+    "rate": 4,
+    "is_moderated": true,
+    "created_at": "2022-03-05T05:24:21.843Z",
+    "updated_at": "2022-03-05T10:18:21.206Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 5,
+  "fields": {
+    "author": 2,
+    "product": 5,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Cras ornare arcu dui vivamus arcu felis. Eget sit amet tellus cras adipiscing enim eu turpis. Arcu cursus euismod quis viverra nibh cras pulvinar. In pellentesque massa placerat duis. Proin sed libero enim sed faucibus turpis in. Volutpat maecenas volutpat blandit aliquam etiam erat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Est sit amet facilisis magna etiam tempor orci eu. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Urna duis convallis convallis tellus id interdum. Ut tristique et egestas quis ipsum suspendisse ultrices. Vitae elementum curabitur vitae nunc sed.\r\n\r\nQuisque non tellus orci ac auctor. Sit amet massa vitae tortor condimentum lacinia quis vel. Donec ultrices tincidunt arcu non sodales neque sodales ut. Congue quisque egestas diam in arcu. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Lorem ipsum dolor sit amet consectetur adipiscing elit. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Sapien faucibus et molestie ac feugiat sed lectus. Sit amet porttitor eget dolor morbi. Et malesuada fames ac turpis egestas. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Mauris nunc congue nisi vitae suscipit. Justo laoreet sit amet cursus. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Turpis egestas integer eget aliquet nibh praesent tristique magna.",
+    "rate": 5,
+    "is_moderated": true,
+    "created_at": "2022-03-05T05:24:33.476Z",
+    "updated_at": "2022-03-05T09:52:53.118Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 6,
+  "fields": {
+    "author": 2,
+    "product": 5,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Cras ornare arcu dui vivamus arcu felis. Eget sit amet tellus cras adipiscing enim eu turpis. Arcu cursus euismod quis viverra nibh cras pulvinar. In pellentesque massa placerat duis. Proin sed libero enim sed faucibus turpis in. Volutpat maecenas volutpat blandit aliquam etiam erat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Est sit amet facilisis magna etiam tempor orci",
+    "rate": 3,
+    "is_moderated": true,
+    "created_at": "2022-03-05T05:25:06.004Z",
+    "updated_at": "2022-03-05T06:57:22.132Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 7,
+  "fields": {
+    "author": 2,
+    "product": 7,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Cras ornare arcu dui vivamus arcu felis. Eget sit amet tellus cras adipiscing enim eu turpis. Arcu cursus euismod quis viverra nibh cras pulvinar. In pellentesque massa placerat duis. Proin sed libero enim sed faucibus turpis in. Volutpat maecenas volutpat blandit aliquam etiam erat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Est sit amet facilisis magna etiam tempor orci",
+    "rate": 4,
+    "is_moderated": true,
+    "created_at": "2022-03-05T05:25:14.209Z",
+    "updated_at": "2022-03-05T05:27:55.903Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 8,
+  "fields": {
+    "author": 2,
+    "product": 9,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Cras ornare arcu dui vivamus arcu felis. Eget sit amet tellus cras adipiscing enim eu turpis. Arcu cursus euismod quis viverra nibh cras pulvinar. In pellentesque massa placerat duis. Proin sed libero enim sed faucibus turpis in. Volutpat maecenas volutpat blandit aliquam etiam erat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Est sit amet facilisis magna etiam tempor orci",
+    "rate": 3,
+    "is_moderated": true,
+    "created_at": "2022-03-05T05:25:21.671Z",
+    "updated_at": "2022-03-05T05:27:55.896Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 9,
+  "fields": {
+    "author": 2,
+    "product": 17,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 4,
+    "is_moderated": true,
+    "created_at": "2022-03-05T06:58:11.156Z",
+    "updated_at": "2022-03-05T06:58:16.416Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 10,
+  "fields": {
+    "author": 2,
+    "product": 10,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 5,
+    "is_moderated": true,
+    "created_at": "2022-03-05T07:31:30.226Z",
+    "updated_at": "2022-03-05T07:33:05.358Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 11,
+  "fields": {
+    "author": 2,
+    "product": 10,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 1,
+    "is_moderated": false,
+    "created_at": "2022-03-05T07:32:46.173Z",
+    "updated_at": "2022-03-05T09:57:01.073Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 12,
+  "fields": {
+    "author": 4,
+    "product": 17,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 5,
+    "is_moderated": true,
+    "created_at": "2022-03-05T07:54:24.238Z",
+    "updated_at": "2022-03-05T07:54:43.108Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 13,
+  "fields": {
+    "author": 4,
+    "product": 1,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 4,
+    "is_moderated": true,
+    "created_at": "2022-03-05T08:37:29.543Z",
+    "updated_at": "2022-03-05T08:37:45.446Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 14,
+  "fields": {
+    "author": 4,
+    "product": 3,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 4,
+    "is_moderated": false,
+    "created_at": "2022-03-05T10:19:26.455Z",
+    "updated_at": "2022-03-05T10:19:26.455Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 15,
+  "fields": {
+    "author": 4,
+    "product": 4,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 5,
+    "is_moderated": true,
+    "created_at": "2022-03-05T10:19:55.443Z",
+    "updated_at": "2022-03-05T10:26:07.756Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 16,
+  "fields": {
+    "author": 4,
+    "product": 5,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 4,
+    "is_moderated": false,
+    "created_at": "2022-03-05T10:20:05.827Z",
+    "updated_at": "2022-03-05T10:20:05.827Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 17,
+  "fields": {
+    "author": 4,
+    "product": 6,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 3,
+    "is_moderated": true,
+    "created_at": "2022-03-05T10:20:29.462Z",
+    "updated_at": "2022-03-05T10:25:58.527Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 18,
+  "fields": {
+    "author": 4,
+    "product": 7,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 5,
+    "is_moderated": true,
+    "created_at": "2022-03-05T10:20:37.532Z",
+    "updated_at": "2022-03-05T10:25:42.561Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 19,
+  "fields": {
+    "author": 4,
+    "product": 9,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 4,
+    "is_moderated": true,
+    "created_at": "2022-03-05T10:20:49.147Z",
+    "updated_at": "2022-03-05T10:25:36.070Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 20,
+  "fields": {
+    "author": 4,
+    "product": 10,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 2,
+    "is_moderated": true,
+    "created_at": "2022-03-05T10:21:02.397Z",
+    "updated_at": "2022-03-05T10:24:20.109Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 21,
+  "fields": {
+    "author": 4,
+    "product": 17,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rate": 3,
+    "is_moderated": true,
+    "created_at": "2022-03-05T10:21:12.280Z",
+    "updated_at": "2022-03-05T10:23:24.055Z"
+  }
+}
+]

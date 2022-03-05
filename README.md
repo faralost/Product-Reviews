@@ -1,6 +1,6 @@
 # Exam-8
 
-Для запуска проекта установите python версии 3.9 и выше и pip
+Для запуска проекта установите python версии 3.10 и выше и pip
 
 После клонирования перейдите в склонированную папку и выполните следующие команды:
 
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 Загрузите фикстурные статьи командой
 ```bash
-1) ./manage.py loaddata auth_dump.json
+1) ./manage.py loaddata auth.json
 2) ./manage.py loaddata dump.json
 ```
 
