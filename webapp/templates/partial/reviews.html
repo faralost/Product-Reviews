@@ -9,7 +9,9 @@
             </div>
             <div class="card-body">
                 <p class="card-text">{{ review.text }}</p>
+                {% if perms.webapp.change_review or review.author == request.user %}
                 <a href="{% url 'webapp:review_update' review.pk %}" class="btn btn-primary">Редактировать отзыв</a>
+                {% endif %}
                 <a href="{% url 'webapp:review_delete' review.pk %}" class="btn btn-danger">Удалить отзыв</a>
             </div>
             <div class="card-footer text-muted">

@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, UpdateView, DeleteView
@@ -21,10 +22,14 @@ class ReviewCreateView(CreateView):
         return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
 
 
-class ReviewUpdateView(UpdateView):
+class ReviewUpdateView(PermissionRequiredMixin, UpdateView):
+    permission_required = 'webapp.change_review'
     form_class = ReviewForm
     model = Review
     template_name = 'review/update.html'
+
+    def has_permission(self):
+        return super().has_permission() or self.get_object().author == self.request.user
 
     def get_success_url(self):
         return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
