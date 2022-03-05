@@ -33,6 +33,11 @@ class ReviewUpdateView(PermissionRequiredMixin, UpdateView):
         else:
             return ReviewForm
 
+    def form_valid(self, form):
+        if not self.request.user.has_perm('webapp.change_review_status'):
+            self.object.is_moderated = False
+        return super().form_valid(form)
+
     def has_permission(self):
         return super().has_permission() or self.get_object().author == self.request.user
 
