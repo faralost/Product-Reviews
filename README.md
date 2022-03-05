@@ -39,4 +39,4 @@ pip install -r requirements.txt
 ./manage.py runserver
 ```
 
-Для доступа в панель администратора перейдите по ссылке http://localhost:8000/admin
+пароли пользователей соответсвуют их юзернейму
