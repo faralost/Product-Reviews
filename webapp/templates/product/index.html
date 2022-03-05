@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row my-3">
+        {% for product in products %}
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a
+                                href="#">{{ product.name }}</a></h5>
+                        <p class="card-text">Категория: {{ product.get_category_display }}</p>
+                        <div class="btn-group">
+                            <a class="btn btn-primary" href="#">Изменить</a>
+                            <a class="btn btn-danger" href="#">Удалить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{#{% if product.image %}#}
+{#    <img src="{{ product.image.url }}" class="card-img-top" alt="#">#}
+{#{% else %}#}
+{#    <img src="images/1024px-No_image_available.svg.png" class="card-img-top" alt="#">#}
+{#{% endif %}#}

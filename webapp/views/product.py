@@ -1,6 +1,9 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import ListView
+
+from webapp.models import Product
 
 
-class IndexView(TemplateView):
-    template_name = 'base.html'
+class IndexView(ListView):
+    template_name = 'product/index.html'
+    model = Product
+    context_object_name = 'products'
