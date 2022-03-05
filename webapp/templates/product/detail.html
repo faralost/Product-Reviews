@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Просмотр{% endblock %}
+
+{#{% block nav %}#}
+{#    <li class="nav-item"><a class="nav-link" href="{% url 'webapp:product_update' product.pk %}">Изменить</a></li>#}
+{#    <li class="nav-item"><a class="nav-link" href="{% url 'webapp:product_delete' product.pk %}">Удалить</a></li>#}
+{#{% endblock %}#}
+
+{% block content %}
+    <br>
+    <div class="card" style="width: 36rem;">
+        <div class="card-body">
+            <h1>{{ product.name }}</h1>
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="#">
+            {% else %}
+                <img src="{% static 'img/1024px-No_image_available.svg.png' %}" class="card-img-top" alt="#">
+            {% endif %}
+            <p class="card-text">Категория: {{ product.get_category_display }}</p>
+            <p class="pre">{{ product.description }}</p>
+        </div>
+    </div>
+{% endblock %}

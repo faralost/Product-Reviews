@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
+from django.urls import reverse
 
 User = get_user_model()
 
@@ -18,6 +19,9 @@ class Product(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+    def get_absolute_url(self):
+        return reverse('webapp:product_detail', kwargs={'pk': self.pk})
 
     class Meta:
         db_table = 'products'
