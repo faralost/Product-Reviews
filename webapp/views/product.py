@@ -19,3 +19,9 @@ class ProductCreateView(CreateView):
     model = Product
     template_name = 'product/create.html'
     form_class = ProductForm
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    form_class = ProductForm
+    template_name = 'product/update.html'

@@ -3,10 +3,10 @@
 
 {% block title %}Просмотр{% endblock %}
 
-{#{% block nav %}#}
-{#    <li class="nav-item"><a class="nav-link" href="{% url 'webapp:product_update' product.pk %}">Изменить</a></li>#}
+{% block nav %}
+    <li class="nav-item"><a class="nav-link px-2 text-white" href="{% url 'webapp:product_update' product.pk %}">Изменить</a></li>
 {#    <li class="nav-item"><a class="nav-link" href="{% url 'webapp:product_delete' product.pk %}">Удалить</a></li>#}
-{#{% endblock %}#}
+{% endblock %}
 
 {% block content %}
     <br>
@@ -19,7 +19,7 @@
                 <img src="{% static 'img/1024px-No_image_available.svg.png' %}" class="card-img-top" alt="#">
             {% endif %}
             <p class="card-text">Категория: {{ product.get_category_display }}</p>
-            <p class="pre">{{ product.description }}</p>
+            <pre class="pre">{{ product.description }}</pre>
         </div>
     </div>
 {% endblock %}
