@@ -6,7 +6,8 @@ from webapp.views.product import (ProductIndexView,
                                   ProductUpdateView,
                                   ProductDeleteView,)
 from webapp.views.review import (ReviewCreateView,
-                                 ReviewUpdateView,)
+                                 ReviewUpdateView,
+                                 ReviewDeleteView,)
 
 app_name = 'webapp'
 
@@ -18,4 +19,5 @@ urlpatterns = [
     path('product/<int:pk>/delete/', ProductDeleteView.as_view(), name='product_delete'),
     path('project/<int:pk>/add-review/', ReviewCreateView.as_view(), name='review_create'),
     path('review/<int:pk>/update/', ReviewUpdateView.as_view(), name='review_update'),
+    path('review/<int:pk>/delete/', ReviewDeleteView.as_view(), name='review_delete'),
 ]
