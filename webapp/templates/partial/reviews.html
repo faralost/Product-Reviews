@@ -7,7 +7,7 @@
             </div>
             <div class="card-body">
                 <p class="card-text">{{ review.text }}</p>
-                <a href="#" class="btn btn-primary">Редактировать отзыв</a>
+                <a href="{% url 'webapp:review_update' review.pk %}" class="btn btn-primary">Редактировать отзыв</a>
             </div>
             <div class="card-footer text-muted">
                 Оценка: {{ review.rate }}

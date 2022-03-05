@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from webapp.forms import ReviewForm
 from webapp.models import Review, Product
@@ -16,6 +16,15 @@ class ReviewCreateView(CreateView):
         form.instance.product = product
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
+
+
+class ReviewUpdateView(UpdateView):
+    form_class = ReviewForm
+    model = Review
+    template_name = 'review/update.html'
 
     def get_success_url(self):
         return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
