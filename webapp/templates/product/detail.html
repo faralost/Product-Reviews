@@ -8,8 +8,10 @@
     <li class="nav-item"><a class="nav-link px-2 text-white" href="{% url 'webapp:product_update' product.pk %}">Изменить</a>
     </li>
     {% endif %}
+    {% if perms.webapp.delete_product %}
     <li class="nav-item"><a class="nav-link px-2 text-white"
                             href="{% url 'webapp:product_delete' product.pk %}">Удалить</a></li>
+    {% endif %}
     <li class="nav-item"><a class="nav-link px-2 text-white" href="{% url 'webapp:review_create' product.pk %}">Оставить отзыв</a>
     </li>
 {% endblock %}
