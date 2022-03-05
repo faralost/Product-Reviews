@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.db.models import Avg
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
@@ -31,7 +32,8 @@ class ProductDetailView(DetailView):
         return avg
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(PermissionRequiredMixin, CreateView):
+    permission_required = 'webapp.add_product'
     model = Product
     template_name = 'product/create.html'
     form_class = ProductForm
