@@ -17,11 +17,6 @@
         отзыв</a>
     {% endif %}
     </li>
-    {% if perms.webapp.change_review_status %}
-        <li class="nav-item"><a class="nav-link px-2 text-white" href="{% url 'webapp:not_moderated_reviews' %}">Неотмодерированные
-            отзывы</a>
-        </li>
-    {% endif %}
 
 {% endblock %}
 

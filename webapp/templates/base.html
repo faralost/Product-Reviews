@@ -21,23 +21,37 @@
                 <li><a href="{% url 'webapp:index' %}" class="nav-link px-2 text-white">Главная</a></li>
                 {% block nav %}
                     {% if perms.webapp.add_product %}
-                     <li class="nav-item">
-                    <a class="nav-link px-2 text-white" href="{% url 'webapp:product_create' %}">Создание товара</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2 text-white" href="{% url 'webapp:product_create' %}">Создание
+                                товара</a>
+                        </li>
                     {% endif %}
+                    {% if perms.webapp.change_review_status %}
+                        <li class="nav-item"><a class="nav-link px-2 text-white"
+                                                href="{% url 'webapp:not_moderated_reviews' %}">Неотмодерированные
+                            отзывы</a>
+                        </li>
+                    {% endif %}
+                {% endblock %}
+                {% block nav-add %}
+
                 {% endblock %}
             </ul>
             <div class="text-end">
                 {% if user.is_authenticated %}
-                <span>Привет, <a class="px-2 text-white text-uppercase" href="{% url 'accounts:detail_profile' user.profile.slug %}">{{ user.username }}!</a></span>&nbsp;
-                <a href="{% url 'accounts:logout' %}" class="btn btn-outline-light me-2">Выход</a>
+                    <span>Привет, <a class="px-2 text-white text-uppercase"
+                                     href="{% url 'accounts:detail_profile' user.profile.slug %}">{{ user.username }}!</a></span>
+                    &nbsp;
+                    <a href="{% url 'accounts:logout' %}" class="btn btn-outline-light me-2">Выход</a>
                 {% else %}
-                {% block login-nav-link %}
-                <a href="{% url 'accounts:login' %}?next={{ request.get_full_path }}" class="btn btn-outline-light me-2">Вход</a>
-                {% endblock %}
-                {% block registration-nav-link %}
-                <a href="{% url 'accounts:registration' %}?next={{ request.get_full_path }}" class="btn btn-warning">Регистрация</a>
-                {% endblock %}
+                    {% block login-nav-link %}
+                        <a href="{% url 'accounts:login' %}?next={{ request.get_full_path }}"
+                           class="btn btn-outline-light me-2">Вход</a>
+                    {% endblock %}
+                    {% block registration-nav-link %}
+                        <a href="{% url 'accounts:registration' %}?next={{ request.get_full_path }}"
+                           class="btn btn-warning">Регистрация</a>
+                    {% endblock %}
                 {% endif %}
             </div>
         </div>

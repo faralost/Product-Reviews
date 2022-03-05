@@ -18,6 +18,9 @@ class Product(models.Model):
                                 verbose_name='Категория')
     image = models.ImageField(null=True, blank=True, upload_to='products/', verbose_name='Картинка')
 
+    def get_avg_rate(self):
+        return self.reviews.all().filter(is_moderated=True).aggregate(avg=Avg('rate'))
+
     def __str__(self):
         return f"{self.name}"
 

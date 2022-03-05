@@ -14,6 +14,7 @@ class ProductIndexView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         return context
 
 
@@ -27,12 +28,8 @@ class ProductDetailView(DetailView):
             context['reviews'] = self.object.reviews.all()
         else:
             context['reviews'] = self.object.reviews.all().filter(is_moderated=True)
-        context['avg'] = self.get_avg_rate()
+        context['avg'] = self.object.get_avg_rate()
         return context
-
-    def get_avg_rate(self):
-        avg = self.object.reviews.all().filter(is_moderated=True).aggregate(avg=Avg('rate'))
-        return avg
 
 
 class ProductCreateView(PermissionRequiredMixin, CreateView):
