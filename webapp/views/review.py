@@ -1,13 +1,13 @@
-from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.shortcuts import get_object_or_404
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 
-from webapp.forms import ReviewForm
+from webapp.forms import ReviewForm, ReviewFormModerator
 from webapp.models import Review, Product
 
 
-class ReviewCreateView(CreateView):
+class ReviewCreateView(LoginRequiredMixin, CreateView):
     form_class = ReviewForm
     template_name = 'review/create.html'
     model = Review
@@ -24,9 +24,14 @@ class ReviewCreateView(CreateView):
 
 class ReviewUpdateView(PermissionRequiredMixin, UpdateView):
     permission_required = 'webapp.change_review'
-    form_class = ReviewForm
     model = Review
     template_name = 'review/update.html'
+
+    def get_form_class(self):
+        if self.request.user.has_perm('webapp.change_review_status'):
+            return ReviewFormModerator
+        else:
+            return ReviewForm
 
     def has_permission(self):
         return super().has_permission() or self.get_object().author == self.request.user

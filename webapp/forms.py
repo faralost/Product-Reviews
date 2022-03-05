@@ -9,7 +9,14 @@ class ProductForm(forms.ModelForm):
         exclude = []
 
 
+class ReviewFormModerator(forms.ModelForm):
+    class Meta:
+        model = Review
+        exclude = ['author', 'product']
+
+
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         exclude = ['author', 'product', 'is_moderated']
+
