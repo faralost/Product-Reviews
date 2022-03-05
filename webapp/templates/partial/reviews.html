@@ -3,7 +3,9 @@
     {% for review in reviews %}
         <div class="card">
             <div class="card-header">
-                автор: {{ review.author }} ({{ review.author.email }})
+                автор: <a class=""
+                          href="{% url 'accounts:detail_profile' review.author.profile.slug %}">{{ review.author }}</a>
+                ({{ review.author.email }})
             </div>
             <div class="card-body">
                 <p class="card-text">{{ review.text }}</p>
