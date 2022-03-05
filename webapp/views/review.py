@@ -35,9 +35,13 @@ class ReviewUpdateView(PermissionRequiredMixin, UpdateView):
         return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
 
 
-class ReviewDeleteView(DeleteView):
+class ReviewDeleteView(PermissionRequiredMixin, DeleteView):
+    permission_required = 'webapp.delete_review'
     model = Review
     template_name = 'review/delete.html'
+
+    def has_permission(self):
+        return super().has_permission() or self.get_object().author == self.request.user
 
     def get_success_url(self):
         return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
