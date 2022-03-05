@@ -39,7 +39,8 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
     form_class = ProductForm
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(PermissionRequiredMixin, UpdateView):
+    permission_required = 'webapp.change_product'
     model = Product
     form_class = ProductForm
     template_name = 'product/update.html'
