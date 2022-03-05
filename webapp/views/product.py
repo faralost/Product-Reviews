@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
 from webapp.forms import ProductForm
-from webapp.models import Product
+from webapp.models import Product, Review
 
 
 class ProductIndexView(ListView):
@@ -14,6 +14,11 @@ class ProductIndexView(ListView):
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'product/detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['reviews'] = self.object.reviews.all().filter(is_moderated=True)
+        return context
 
 
 class ProductCreateView(CreateView):

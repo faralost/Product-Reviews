@@ -1,0 +1,20 @@
+<h1>Отзывы</h1>
+{% if reviews %}
+    {% for review in reviews %}
+        <div class="card">
+            <div class="card-header">
+                автор: {{ review.author }} ({{ review.author.email }})
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ review.text }}</p>
+                <a href="#" class="btn btn-primary">Редактировать отзыв</a>
+            </div>
+            <div class="card-footer text-muted">
+                Оценка: {{ review.rate }}
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{% else %}
+    <h5>Отзывов пока нет...</h5>
+{% endif %}
