@@ -23,7 +23,10 @@ class ProductDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['reviews'] = self.object.reviews.all().filter(is_moderated=True)
+        if self.request.user.has_perm('webapp.change_review_status'):
+            context['reviews'] = self.object.reviews.all()
+        else:
+            context['reviews'] = self.object.reviews.all().filter(is_moderated=True)
         context['avg'] = self.get_avg_rate()
         return context
 

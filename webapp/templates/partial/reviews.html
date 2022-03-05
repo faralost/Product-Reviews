@@ -10,15 +10,22 @@
             <div class="card-body">
                 <p class="card-text">{{ review.text }}</p>
                 {% if perms.webapp.change_review or review.author == request.user %}
-                <a href="{% url 'webapp:review_update' review.pk %}" class="btn btn-primary">Редактировать отзыв</a>
+                    <a href="{% url 'webapp:review_update' review.pk %}" class="btn btn-primary">Редактировать отзыв</a>
                 {% endif %}
 
                 {% if perms.webapp.delete_review or review.author == request.user %}
-                <a href="{% url 'webapp:review_delete' review.pk %}" class="btn btn-danger">Удалить отзыв</a>
+                    <a href="{% url 'webapp:review_delete' review.pk %}" class="btn btn-danger">Удалить отзыв</a>
                 {% endif %}
             </div>
             <div class="card-footer text-muted">
-                Оценка: {{ review.rate }}
+                Оценка: {{ review.rate }} <br>
+                {% if perms.webapp.change_review_status %}
+                    Модерирован: {% if review.is_moderated %}
+                    да
+                {% else %}
+                    нет
+                {% endif %}
+                {% endif %}
             </div>
         </div>
         <br>
