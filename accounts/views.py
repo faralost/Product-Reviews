@@ -27,7 +27,7 @@ class RegisterView(CreateView):
         if not next_url:
             next_url = self.request.POST.get('next')
         if not next_url:
-            next_url = reverse('todolistapp:project_index')
+            next_url = reverse('webapp:index')
         return next_url
 
 
@@ -36,6 +36,11 @@ class UserDetailView(LoginRequiredMixin, DetailView):
     template_name = 'user_detail.html'
     context_object_name = 'user_obj'
     slug_field = 'profile__slug'
+
+    def get_context_data(self, **kwargs):
+        reviews = self.object.reviews.all()
+        kwargs['reviews'] = reviews
+        return super().get_context_data(**kwargs)
 
 
 class UsersListView(PermissionRequiredMixin, ListView):

@@ -11,6 +11,11 @@
                         <h5 class="card-title"><a
                                 href="{{ product.get_absolute_url }}">{{ product.name }}</a></h5>
                         <p class="card-text">Категория: {{ product.get_category_display }}</p>
+                        {% if not product.reviews.all %}
+                            <p class="card-text">Cредняя оценка: 0 </p>
+                        {% else %}
+                            <p class="card-text">Cредняя оценка: </p>
+                        {% endif %}
                         <div class="btn-group">
                             <a class="btn btn-primary" href="#">Изменить</a>
                             <a class="btn btn-danger" href="#">Удалить</a>
