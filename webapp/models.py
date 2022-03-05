@@ -47,3 +47,7 @@ class Review(models.Model):
         db_table = 'reviews'
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
+
+        permissions = [
+            ('change_review_status', 'Может изменять статус отзывов')
+        ]

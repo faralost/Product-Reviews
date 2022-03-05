@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse, reverse_lazy
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 
 from webapp.forms import ReviewForm
 from webapp.models import Review, Product
@@ -45,3 +45,13 @@ class ReviewDeleteView(PermissionRequiredMixin, DeleteView):
 
     def get_success_url(self):
         return reverse('webapp:product_detail', kwargs={'pk': self.object.product.pk})
+
+
+class NotModeratedReviewsView(PermissionRequiredMixin, ListView):
+    permission_required = 'webapp.change_review_status'
+    model = Review
+    context_object_name = 'reviews'
+    template_name = 'review/not_moderated_reviews.html'
+
+    def get_queryset(self):
+        return super().get_queryset().filter(is_moderated=False).order_by('-created_at')

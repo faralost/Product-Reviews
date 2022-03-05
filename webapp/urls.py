@@ -7,7 +7,8 @@ from webapp.views.product import (ProductIndexView,
                                   ProductDeleteView,)
 from webapp.views.review import (ReviewCreateView,
                                  ReviewUpdateView,
-                                 ReviewDeleteView,)
+                                 ReviewDeleteView,
+                                 NotModeratedReviewsView,)
 
 app_name = 'webapp'
 
@@ -20,4 +21,5 @@ urlpatterns = [
     path('project/<int:pk>/add-review/', ReviewCreateView.as_view(), name='review_create'),
     path('review/<int:pk>/update/', ReviewUpdateView.as_view(), name='review_update'),
     path('review/<int:pk>/delete/', ReviewDeleteView.as_view(), name='review_delete'),
+    path('reviews/not-moderated', NotModeratedReviewsView.as_view(), name='not_moderated_reviews')
 ]
