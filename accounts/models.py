@@ -12,7 +12,7 @@ class Profile(models.Model):
     about = models.TextField(max_length=1000, verbose_name='О себе', null=True, blank=True)
     slug = models.SlugField(null=False, unique=True)
 
-    def save(self, *args, **kwargs):  # new
+    def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.user)
         return super().save(*args, **kwargs)

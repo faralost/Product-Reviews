@@ -1,14 +1,18 @@
 from django.urls import path
 
-from webapp.views.product import (ProductIndexView,
-                                  ProductDetailView,
-                                  ProductCreateView,
-                                  ProductUpdateView,
-                                  ProductDeleteView,)
-from webapp.views.review import (ReviewCreateView,
-                                 ReviewUpdateView,
-                                 ReviewDeleteView,
-                                 NotModeratedReviewsView,)
+from webapp.views.product import (
+    ProductIndexView,
+    ProductDetailView,
+    ProductCreateView,
+    ProductUpdateView,
+    ProductDeleteView,
+)
+from webapp.views.review import (
+    ReviewCreateView,
+    ReviewUpdateView,
+    ReviewDeleteView,
+    NotModeratedReviewsView,
+)
 
 app_name = 'webapp'
 
